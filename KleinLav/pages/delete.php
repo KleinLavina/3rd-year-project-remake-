@@ -1,11 +1,8 @@
 <?php
 // Connect to the database
-$db = new mysqli("localhost", "root", "", "nyxify-registration");
+require "file/database.php";
+$db = new Database();
 
-// Check if the connection was successful
-if ($db->connect_error) {
-    die("Connection Failed: " . $db->connect_error);
-}
 
 // Handle search query
 $searchResults = [];
